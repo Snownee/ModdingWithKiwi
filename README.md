@@ -4,6 +4,12 @@
 
 * [模块系统](module.md)
 * [自动注册](registry.md)
+* 实用类
+  * [NBTHelper](utils/nbthelper.md)
+* 物品/方块拓展
+* TileEntity
+* 网络
+* 可变材质方块
 
 ## 欢迎
 
