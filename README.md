@@ -44,3 +44,14 @@ dependencies {
 
 重新部署你的开发环境。这时若运行项目时 Kiwi 被加载，即说明准备工作已经完成。
 
+记得在 mods.toml 中将 Kiwi 声明为前置模组：
+
+```text
+[[dependencies.my_mod]]
+    modId="kiwi"
+    mandatory=true
+    versionRange="[2.3, 2.5)"
+    ordering="BEFORE"
+    side="BOTH"
+```
+
