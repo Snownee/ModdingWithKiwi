@@ -15,7 +15,7 @@
   * [动态配方](recipe/dynamic.md)
 * [可变材质方块](textureable/)
   * 合成配方
-* 内置命令
+* [内置命令](command.md)
 
 ## 欢迎
 
