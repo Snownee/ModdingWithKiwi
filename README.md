@@ -8,7 +8,7 @@
   * [NBTHelper](utils/nbthelper.md)
 * [物品 / 方块拓展](item-block.md)
 * [TileEntity](tileentity.md)
-* 网络
+* [网络](network.md)
 * 配方
   * [条件：模块加载](recipe/module-loaded.md)
   * [配方：消耗容器](recipe/no-containers.md)
