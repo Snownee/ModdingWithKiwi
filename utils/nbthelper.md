@@ -25,8 +25,9 @@ NBTHelper data = NBTHelper.of(itemstack);
 ```java
 data.setInt("a", 1); // { a: 1 }
 data.setString("b.c", "2"); // { a: 1, b: { c: "2" } }
+data.remove("a"); // { b: { c: "2" } }
 
-data.get(); // { a: 1, b: { c: "2" } }
+data.get(); // { b: { c: "2" } }
 
 data.getString("a"); // null
 data.getString("a", "empty"); // "empty"
