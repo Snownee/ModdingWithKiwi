@@ -92,6 +92,10 @@ public class MyModule extends AbstractModule
 }
 ```
 
+{% hint style="info" %}
+该 Item.Properties 被使用后会被设置为 null
+{% endhint %}
+
 ## 设置默认 ItemGroup
 
 手动为模块内的每个物品和方块设置 ItemGroup 是一件相当麻烦的事情，为此 Kiwi 提供了这种方式注入默认的 ItemGroup。
