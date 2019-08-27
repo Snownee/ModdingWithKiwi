@@ -6,8 +6,8 @@
 * [自动注册](registry.md)
 * 实用类
   * [NBTHelper](utils/nbthelper.md)
-* 物品/方块拓展
-* TileEntity
+* [物品 / 方块拓展](item-block.md)
+* [TileEntity](tileentity.md)
 * 网络
 * 可变材质方块
 
