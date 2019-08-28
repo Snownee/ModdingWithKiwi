@@ -51,7 +51,7 @@ public class MyModule extends AbstractModule
 
 ### `@NoGroup`
 
-此字段可以禁用物品或方块的默认 item group 设置。
+此字段可以禁用物品或方块的默认 ItemGroup 设置。
 
 ### `@Name`
 
