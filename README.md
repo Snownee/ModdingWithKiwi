@@ -6,6 +6,7 @@
 * [自动注册](registry.md)
 * 实用类
   * [NBTHelper](utils/nbthelper.md)
+  * 杂项
 * [物品 / 方块拓展](item-block.md)
 * [TileEntity](tileentity.md)
 * [网络](network.md)
@@ -15,6 +16,7 @@
   * [动态配方](recipe/dynamic.md)
 * [可变材质方块](textureable/)
   * [合成配方](textureable/crafting.md)
+* [任务系统](schedule.md)
 * [内置命令](command.md)
 
 ## 欢迎
@@ -37,8 +39,8 @@ compile files("Kiwi-${minecraft_version}-${kiwi_version}-deobf.jar")
 
 ```groovy
 dependencies {
-    minecraft "net.minecraftforge:forge:1.14.4-28.0.55"
-	compile files("Kiwi-1.14.4-2.3.2-deobf.jar")
+    minecraft "net.minecraftforge:forge:1.14.4-28.1.59"
+	compile files("Kiwi-1.14.4-2.4.2-deobf.jar")
 }
 ```
 
@@ -50,7 +52,7 @@ dependencies {
 [[dependencies.my_mod]]
     modId="kiwi"
     mandatory=true
-    versionRange="[2.3, 2.5)"
+    versionRange="[2.4, 2.7)"
     ordering="BEFORE"
     side="BOTH"
 ```

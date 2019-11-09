@@ -92,7 +92,7 @@ public class MyModule extends AbstractModule
 }
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 该 Item.Properties 被使用后会被设置为 null
 {% endhint %}
 

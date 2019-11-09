@@ -68,6 +68,14 @@ public class MyModule extends AbstractModule
 @KiwiModule(dependencies = "crafttweaker;jei")
 ```
 
+你甚至可以声明该模块的前置模块：
+
+```java
+@KiwiModule(dependencies = "@my_mod:dab")
+// 等效但是更短：
+@KiwiModule(dependencies = "@dab")
+```
+
 ## `@KiwiModule.Optional`
 
 此注解可令该模块通过配置文件禁用。配置文件名为 kiwi.toml ，它的结构大概长这样：

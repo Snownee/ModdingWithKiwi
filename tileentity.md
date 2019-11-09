@@ -6,8 +6,8 @@ Kiwi 的 TileEntity 基类拥有更方便的数据管理功能。
 
 在基类 BaseTile 中，数据同步和数据存储的方法被分开：
 
-{% code-tabs %}
-{% code-tabs-item title="MyTile.java" %}
+{% tabs %}
+{% tab title="MyTile.java" %}
 ```java
 import net.minecraft.nbt.CompoundNBT;
 import snownee.kiwi.tile.BaseTile;
@@ -44,8 +44,8 @@ public class MyTile extends BaseTile
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 不过通常你可以直接这么写：
 
@@ -73,8 +73,8 @@ refresh();
 
 ## 方块破坏时保留数据
 
-{% code-tabs %}
-{% code-tabs-item title="MyTile.java" %}
+{% tabs %}
+{% tab title="MyTile.java" %}
 ```java
 public class MyTile extends BaseTile
 {
@@ -89,6 +89,6 @@ public class MyTile extends BaseTile
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 

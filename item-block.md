@@ -6,16 +6,16 @@ Kiwi 对 Item / Block 类进行了拓展，推荐直接继承这些类编写自�
 
 你可以非常方便地为物品 / 方块添加气泡提示信息。
 
-{% code-tabs %}
-{% code-tabs-item title="zh\_cn.json" %}
+{% tabs %}
+{% tab title="zh\_cn.json" %}
 ```text
 {
   "item.my_mod.cool_item": "Cool Item",
   "item.my_mod.cool_item.tip": "你正在看着一个很酷的物品！"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 玩家可以在配置文件中调整提示信息的换行宽度以及显示方式。
 
@@ -50,6 +50,19 @@ public class MyModule extends AbstractModule
 public class MyModule extends AbstractModule
 {
     public static final SlabBlock COOL_SLAB = init(new SlabBlock(blockProp(Material.WOOD)));
+}
+```
+
+## 注册标签
+
+你可以轻易在模块中引入标签：
+
+```java
+@KiwiModule
+public class MyModule extends AbstractModule
+{
+    public static final Tag<Block> THONK = blockTag("my_mod", "thonk");
+    public static final Tag<EntityType<?>> BAT = entityTag("my_mod", "bat");
 }
 ```
 

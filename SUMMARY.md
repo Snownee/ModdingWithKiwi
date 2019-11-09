@@ -5,6 +5,7 @@
 * [自动注册](registry.md)
 * [实用类](utils/README.md)
   * [NBTHelper](utils/nbthelper.md)
+  * [杂项](utils/util.md)
 * [物品 / 方块拓展](item-block.md)
 * [TileEntity](tileentity.md)
 * [网络](network.md)
@@ -14,5 +15,6 @@
   * [动态配方](recipe/dynamic.md)
 * [可变材质方块](textureable/README.md)
   * [合成配方](textureable/crafting.md)
+* [任务系统](schedule.md)
 * [内置命令](command.md)
 

@@ -13,7 +13,7 @@
 }
 ```
 
-{% hint style="info" %}
+{% hint style="warning" %}
 仅支持原版的方块模型和 Multipart 模型，不支持 Forge 添加的 ForgeBlockStateV1 等格式
 {% endhint %}
 
