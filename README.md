@@ -6,7 +6,7 @@
 * [自动注册](registry.md)
 * 实用类
   * [NBTHelper](utils/nbthelper.md)
-  * 杂项
+  * [杂项](utils/util.md)
 * [物品 / 方块拓展](item-block.md)
 * [TileEntity](tileentity.md)
 * [网络](network.md)
