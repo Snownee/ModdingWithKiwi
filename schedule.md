@@ -26,24 +26,40 @@ Kiwi 内置了两种 Task 以供使用：SimpleWorldTask 和 SimpleGlobalTask。
 ```java
 public class MyTask extends SimpleWorldTask {
     public static final ResourceLocation ID = new ResourceLocation("my_mod", "test");
+    private String words;
 
-    // 0参构造器为必需
     public MyTask() {}
 
-    public MyTask(World world, TickEvent.Phase phase) {
+    public MyTask(World world, TickEvent.Phase phase, String words) {
         super(world, phase, null);
+        this.words = words;
     }
 
     @Override
     public boolean tick(WorldTicker ticker) {
-        if (++tick % 20 == 0) {
+        if (++tick >= 50) {
             MinecraftServer server = ticker.getWorld().getServer();
             if (server != null) {
-                TextComponent text = new StringTextComponent("" + tick / 20);
+                TextComponent text = new StringTextComponent(words);
                 server.getPlayerList().sendMessage(text);
             }
+            return true;
+        } else {
+            return false;
         }
-        return tick >= 200;
+    }
+
+    @Override
+    public void deserializeNBT(CompoundNBT data) {
+        super.deserializeNBT(data);
+        words = data.getString("words");
+    }
+
+    @Override
+    public CompoundNBT serializeNBT() {
+        CompoundNBT data = super.serializeNBT();
+        data.putString("words", words);
+        return data;
     }
 }
 ```
