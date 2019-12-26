@@ -1,8 +1,9 @@
 # 任务系统
 
-{% hint style="warning" %}
-该系统仍不完善，请谨慎使用。
-{% endhint %}
+```eval_rst
+.. warning::
+  该系统仍不完善，请谨慎使用。
+```
 
 为了在未来某个时间（甚至是下次游玩时）执行一段代码，我们引入了任务系统。
 
@@ -72,4 +73,3 @@ protected void serverInit(FMLServerStartingEvent event) {
     Scheduler.register(MyTask.ID, MyTask.class);
 }
 ```
-

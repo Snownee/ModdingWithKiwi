@@ -92,9 +92,10 @@ public class MyModule extends AbstractModule
 }
 ```
 
-{% hint style="warning" %}
-该 Item.Properties 被使用后会被设置为 null
-{% endhint %}
+```eval_rst
+.. warning::
+  该 Item.Properties 被使用后会被设置为 null
+```
 
 ## 设置默认 ItemGroup
 
@@ -139,4 +140,3 @@ KiwiManager.GROUPS.put("my_awesome_item_group", group);
 @KiwiModule.Group("my_awesome_item_group")
 public class MyModule extends AbstractModule {...}
 ```
-

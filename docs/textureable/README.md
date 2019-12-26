@@ -13,9 +13,10 @@
 }
 ```
 
-{% hint style="warning" %}
-仅支持原版的方块模型和 Multipart 模型，不支持 Forge 添加的 ForgeBlockStateV1 等格式
-{% endhint %}
+```eval_rst
+.. hint:
+  仅支持原版的方块模型和 Multipart 模型，不支持 Forge 添加的 ForgeBlockStateV1 等格式
+```
 
 其中 `all` 指定了所有面的材质。我们需要在适当时候告诉模型这个 key 是可变材质的。
 
@@ -89,4 +90,3 @@ public class TestTile extends TextureTile
 ```
 
 可能你已经注意到了：应用的材质是根据方块的粒子来决定的。所以此功能无法满足你“做个木头台阶”的需求。（因为粒子材质不能同时为顶面和侧面）
-
