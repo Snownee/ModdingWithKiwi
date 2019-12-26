@@ -14,7 +14,7 @@
   * [条件：模块加载](recipe/module-loaded.md)
   * [配方：消耗容器](recipe/no-containers.md)
   * [动态配方](recipe/dynamic.md)
-* [可变材质方块](textureable/)
+* [可变材质方块](textureable/README.md)
   * [合成配方](textureable/crafting.md)
 * [任务系统](schedule.md)
 * [内置命令](command.md)
@@ -48,7 +48,7 @@ dependencies {
 
 记得在 mods.toml 中将 Kiwi 声明为前置模组：
 
-```text
+```toml
 [[dependencies.my_mod]]
     modId="kiwi"
     mandatory=true
