@@ -6,7 +6,7 @@
 
 举个例子，一个支持以任何完整方块作为材料的楼梯：
 
-```text
+```json
 {
   "type": "kiwi:texture_block",
   "pattern": [
@@ -37,7 +37,7 @@
 
 你需要添加标记让可变材质方块在合成以及序列化时记录来源的物品：（第16行）
 
-```text
+```json
 {
   "type": "kiwi:texture_block",
   "pattern": [

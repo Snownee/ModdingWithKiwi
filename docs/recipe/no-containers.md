@@ -2,7 +2,7 @@
 
 令合成完成时不保留容器。（想想蛋糕配方中的牛奶桶）
 
-```text
+```json
 {
   "type": "kiwi:shaped_no_containers",
   "pattern": [
@@ -21,7 +21,7 @@
 
 这里还有一个无序版本的：
 
-```text
+```json
 {
   "type": "kiwi:shapeless_no_containers",
   "ingredients": [
@@ -34,4 +34,3 @@
   }
 }
 ```
-

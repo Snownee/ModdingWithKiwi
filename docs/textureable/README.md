@@ -4,7 +4,7 @@
 
 首先我们需要一个最基本的模型：
 
-```text
+```json
 {
     "parent": "block/cube_all",
     "textures": {
@@ -14,7 +14,7 @@
 ```
 
 ```eval_rst
-.. hint:
+.. hint::
   仅支持原版的方块模型和 Multipart 模型，不支持 Forge 添加的 ForgeBlockStateV1 等格式
 ```
 

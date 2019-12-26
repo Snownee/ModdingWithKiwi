@@ -127,3 +127,14 @@ public class MyModule extends AbstractModule
 
 设置该模块下的物品默认的 ItemGroup。将在下一节详细讲解。
 
+## 实例注入
+
+这种方式可以令 Kiwi 在启用此模块时直接将实例注入到该字段中：
+
+```java
+@KiwiModule
+public class MyModule extends AbstractModule
+{
+    public static MyModule INSTANCE;
+}
+```
