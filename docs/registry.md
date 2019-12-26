@@ -96,7 +96,9 @@ public class MyModule extends AbstractModule
 
   该 Item.Properties 被使用后会被设置为 null
 
-## 设置默认 ItemGroup
+## 设置 ItemGroup
+
+### 设置默认 ItemGroup
 
 手动为模块内的每个物品和方块设置 ItemGroup 是一件相当麻烦的事情，为此 Kiwi 提供了这种方式注入默认的 ItemGroup。
 
@@ -131,11 +133,38 @@ public class MyModule extends AbstractModule {...}
 你还可以添加一个 ItemGroup：
 
 ```java
-KiwiManager.GROUPS.put("my_awesome_item_group", group);
+KiwiManager.GROUPS.put("my_mod:my_awesome_group", group);
 ```
 
 ```java
 @KiwiModule
-@KiwiModule.Group("my_awesome_item_group")
+@KiwiModule.Group("my_mod:my_awesome_group")
 public class MyModule extends AbstractModule {...}
+```
+
+### 为单个注册项设置 ItemGroup
+
+```java
+@KiwiModule.Group("redstone")
+public static final Item MY_ITEM = new Item(itemProp());
+
+@KiwiModule.Group("building_blocks")
+public static final Block MY_BLOCK = new Block(blockProp(Blocks.SAND));
+```
+
+## 为方块设置 RenderType
+
+方式一：直接设置单个注册项：
+
+```java
+// 允许的值：CUTOUT, CUTOUT_MIPPED, TRANSLUCENT
+@RenderLayer(Layer.CUTOUT)
+public static final Block MY_GLASS = new GlassBlock(blockProp(Blocks.GLASS));
+```
+
+方式二：为某个方块类及其子类设置 RenderType：
+
+```java
+@RenderLayer(Layer.CUTOUT)
+public class MyBlock extends GlassBlock {...}
 ```

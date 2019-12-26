@@ -20,8 +20,8 @@ compile files("Kiwi-${minecraft_version}-${kiwi_version}-deobf.jar")
 
 ```groovy
 dependencies {
-    minecraft "net.minecraftforge:forge:1.14.4-28.1.59"
-	compile files("Kiwi-1.14.4-2.4.2-deobf.jar")
+    minecraft "net.minecraftforge:forge:1.15.1-30.0.16"
+	compile files("Kiwi-1.14.4-2.5.2-deobf.jar")
 }
 ```
 
@@ -33,7 +33,7 @@ dependencies {
 [[dependencies.my_mod]]
     modId="kiwi"
     mandatory=true
-    versionRange="[2.4, 2.7)"
+    versionRange="[2.5, 2.8)"
     ordering="BEFORE"
     side="BOTH"
 ```
