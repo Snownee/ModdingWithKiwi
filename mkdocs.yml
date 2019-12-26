@@ -21,4 +21,9 @@ nav:
     - 任务系统: schedule.md
     - 内置命令: command.md
 
-theme: readthedocs
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - groovy
+        - toml
