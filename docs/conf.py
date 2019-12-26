@@ -17,15 +17,16 @@
 
 # -- Project information -----------------------------------------------------
 
+import recommonmark
+
 project = 'ModdingWithKiwi'
 copyright = '2019, Snownee'
 author = 'Snownee'
 
-
 # -- General configuration ---------------------------------------------------
 
-source_suffix = ['.md', '.rst']
 master_doc = 'index'
+source_suffix = ['.rst', '.md']
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
