@@ -92,10 +92,8 @@ public class MyModule extends AbstractModule
 }
 ```
 
-```eval_rst
-.. warning::
+!!! Warning
   该 Item.Properties 被使用后会被设置为 null
-```
 
 ## 设置默认 ItemGroup
 

@@ -73,7 +73,5 @@ public boolean isMark(String key)
 }
 ```
 
-```eval_rst
-.. hint::
+!!! Note
   需要得到被标记 key 的物品名？只需使用 `snownee.kiwi.util.Util#getTextureItem`
-```
