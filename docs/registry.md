@@ -93,6 +93,7 @@ public class MyModule extends AbstractModule
 ```
 
 !!! Warning
+
   该 Item.Properties 被使用后会被设置为 null
 
 ## 设置默认 ItemGroup
