@@ -20,6 +20,7 @@ nav:
         - 合成配方: textureable/crafting.md
     - 任务系统: schedule.md
     - 内置命令: command.md
+    - 调试功能: debug.md
 
 theme:
     name: readthedocs
