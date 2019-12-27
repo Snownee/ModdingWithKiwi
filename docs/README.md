@@ -6,6 +6,8 @@
 
 Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便快捷地开发 Forge 模组。
 
+[使用 Kiwi 开发的模组](https://www.curseforge.com/minecraft/mc-mods/kiwi/relations/dependents?filter-related-dependents=3)
+
 本指南面向 Minecraft 1.14+（Kiwi 2.0+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了足够的了解。
 
 ## 准备工作
