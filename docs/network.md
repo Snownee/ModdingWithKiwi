@@ -47,7 +47,7 @@ public class MyPacket extends Packet
 }
 ```
 
-注册这个 Packet：
+在 preInit 阶段注册这个 Packet：
 
 ```java
 NetworkChannel.register(MyPacket.class, new MyPacket.Handler());
@@ -67,4 +67,3 @@ new MyPacket(943).send();
 ```
 
 若你的 Packet 只需从客户端发出，可以直接继承 `snownee.kiwi.network.ClientPacket`。使用上述方法发送你的 Packet。
-
