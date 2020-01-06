@@ -107,6 +107,7 @@ public class MyModule extends AbstractModule
     public void onModelBake(ModelBakeEvent event)
     {
         // do sth
+        // 注意：非静态方法！
     }
 }
 ```
