@@ -21,7 +21,7 @@ compile files("Kiwi-${minecraft_version}-${kiwi_version}-deobf.jar")
 ```groovy
 dependencies {
     minecraft "net.minecraftforge:forge:1.14.4-28.1.59"
-	compile files("Kiwi-1.14.4-2.4.2-deobf.jar")
+	compile files("Kiwi-1.14.4-2.6.0-deobf.jar")
 }
 ```
 
