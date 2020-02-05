@@ -6,16 +6,12 @@ Kiwi 对 Item / Block 类进行了拓展，推荐直接继承这些类编写自�
 
 你可以非常方便地为物品 / 方块添加气泡提示信息。
 
-{% tabs %}
-{% tab title="zh\_cn.json" %}
 ```text
 {
   "item.my_mod.cool_item": "Cool Item",
   "item.my_mod.cool_item.tip": "你正在看着一个很酷的物品！"
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 玩家可以在配置文件中调整提示信息的换行宽度以及显示方式。
 
@@ -73,6 +69,3 @@ public class MyModule extends AbstractModule
 ```java
 ModBlockItem.INSTANT_UPDATE_TILES.add(TILE_ENTITY_TYPE);
 ```
-
-
-
