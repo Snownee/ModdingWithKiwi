@@ -13,10 +13,6 @@ public class MyPacket extends Packet
 {
     private int number;
 
-    public MyPacket()
-    {
-    }
-
     public MyPacket(int number)
     {
         this.number = number;
@@ -40,7 +36,10 @@ public class MyPacket extends Packet
         @Override
         public void handle(MyPacket message, Supplier<Context> ctx)
         {
-            System.out.println(message.number);
+            ctx.get().enqueueWork(() -> {
+                System.out.println(message.number);
+            });
+            ctx.get().setPacketHandled(true);
         }
 
     }
