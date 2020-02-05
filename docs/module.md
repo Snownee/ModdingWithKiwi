@@ -139,3 +139,14 @@ public class MyModule extends AbstractModule
     public static MyModule INSTANCE;
 }
 ```
+
+## 自定义加载条件
+
+有时，仅仅通过配置文件或依赖来判断模块是否需要加载仍满足不了我们的需求。比如我们希望模块仅在 Mixin 生效时加载。这时候我们需要用到 `@KiwiModule.LoadingCondition`，将静态方法放在任意位置即可。
+
+```java
+@LoadingCondition("dab")
+public static boolean shouldLoadDab(LoadingContext ctx) {
+    return Hook.mixin;
+}
+```

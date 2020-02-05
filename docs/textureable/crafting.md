@@ -69,7 +69,7 @@
 @Override
 public boolean isMark(String key)
 {
-    return key.equals("top");
+    return "top".equals(key);
 }
 ```
 

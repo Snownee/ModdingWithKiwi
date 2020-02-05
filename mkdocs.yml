@@ -15,12 +15,18 @@ nav:
         - 条件：模块加载: recipe/module-loaded.md
         - 配方：消耗容器: recipe/no-containers.md
         - 动态配方: recipe/dynamic.md
+        - 新的配方类型: recipe/new-type.md
+        - 流体Ingredient: recipe/fluid-ingredient.md
     - 可变材质方块:
         - 可变材质方块: textureable/README.md
         - 合成配方: textureable/crafting.md
     - 任务系统: schedule.md
     - 内置命令: command.md
     - 调试功能: debug.md
+    - 贡献者奖励:
+        - 贡献者奖励: contributors/README.md
+        - IRewardProvider: contributors/provider.md
+        - 添加效果: contributors/renderer.md
 
 theme:
     name: readthedocs
