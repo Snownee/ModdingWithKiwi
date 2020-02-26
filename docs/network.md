@@ -24,13 +24,13 @@ public class MyPacket extends Packet
         @Override
         public void encode(MyPacket msg, PacketBuffer buffer)
         {
-            buffer.writeInt(msg.number);
+            buffer.writeVarInt(msg.number);
         }
 
         @Override
         public MyPacket decode(PacketBuffer buffer)
         {
-            return new MyPacket(buffer.readInt());
+            return new MyPacket(buffer.readVarInt());
         }
 
         @Override

@@ -17,6 +17,6 @@ Util.RL("minecraft:foo", "my_mod"); // minecraft:foo
 ```java
 Util.trimRL("minecraft:foo"); // foo
 Util.trimRL("my_mod:foo"); // my_mod:foo
+Util.trimRL("my_mod:foo", "my_mod"); // foo
 // 也支持 ResourceLocation 参数
 ```
-

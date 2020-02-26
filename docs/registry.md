@@ -122,7 +122,7 @@ public class MyModule extends AbstractModule
 
 如果有 `@KiwiModule.Group` 注解，Kiwi 会将模块中第一个 ItemGroup 字段作为默认，注入到每个无 `@NoGroup` 注解的物品和方块中。
 
-你也可以这样将原版的 ItemGroup 设为默认。可用的值：`building_blocks`, `decorations`, `redstone`, `transportation`, `misc`, `food`, `tools`, `combat`, `brewing`。
+你也可以这样将任意 ItemGroup 设为默认。只需填入 ItemGroup 的 label 名，如原版的：`building_blocks`, `decorations`, `redstone`, `transportation`, `misc`, `food`, `tools`, `combat`, `brewing`。
 
 ```java
 @KiwiModule
@@ -130,15 +130,9 @@ public class MyModule extends AbstractModule
 public class MyModule extends AbstractModule {...}
 ```
 
-你还可以添加一个 ItemGroup：
-
-```java
-KiwiManager.GROUPS.put("my_mod:my_awesome_group", group);
-```
-
 ```java
 @KiwiModule
-@KiwiModule.Group("my_mod:my_awesome_group")
+@KiwiModule.Group("my_mod.my_awesome_group")
 public class MyModule extends AbstractModule {...}
 ```
 
