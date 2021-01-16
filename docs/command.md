@@ -49,3 +49,23 @@ Kiwi 提供了旧版本使用数字 ID 切换游戏模式的功能。
 ```text
 /kiwi 1
 ```
+
+## 应用调试世界规则
+
+```text
+/kiwi cleanWorld
+```
+
+等效于
+
+```text
+/gamerule doDaylightCycle false
+/gamerule doWeatherCycle false
+/gamerule doMobLoot false
+/gamerule doMobSpawning false
+/difficulty peaceful
+/kill @e[type=!minecraft:player]
+/time set day
+/weather clear
+/gamerule doMobLoot true
+```

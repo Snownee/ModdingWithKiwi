@@ -1,17 +1,17 @@
-# IRewardProvider
+# ITierProvider
 
-想要给赞助者奖励，我们首先要知道赞助者有哪些，这就是 `IRewardProvider` 的作用。
+想要给赞助者奖励，我们首先要知道赞助者有哪些，这就是 ITierProvider 的作用。
 
-注册你的 IRewardProvider：
+注册你的 ITierProvider：
 
 ```java
 @Override
 protected void init(FMLCommonSetupEvent event) {
-    registerRewardProvider(new MyRewardProvider());
+    registerTierProvider(new MyRewardProvider());
 }
 ```
 
-Kiwi 内置了一个实现 —— `JsonRewardProvider`。允许你从某个 URL 中以 JSON 格式读取赞助者列表。它的格式就像这样：（其中`*`代表所有等级。注意等级要全部小写）
+Kiwi 内置了一个实现 —— JsonRewardProvider。允许你从某个 URL 中以 JSON 格式读取赞助者列表。它的格式就像这样：（其中`*`代表这些ID拥有所有等级。注意等级要全部小写）
 
 ```json
 {
@@ -26,7 +26,7 @@ Kiwi 内置了一个实现 —— `JsonRewardProvider`。允许你从某个 URL 
 ```java
 public class MyRewardProvider extends JsonRewardProvider {
     public MyRewardProvider() {
-        super("Snownee", "https://raw.githubusercontent.com/Snownee/Kiwi/master/contributors.json");
+        super("Snownee", () -> Collections.singletonList("https://raw.githubusercontent.com/Snownee/Kiwi/master/contributors.json"));
     }
 }
 ```

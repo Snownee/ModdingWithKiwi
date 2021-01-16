@@ -9,13 +9,15 @@ Kiwi 对 Item / Block 类进行了拓展，推荐直接继承这些类编写自�
 ```text
 {
   "item.my_mod.cool_item": "Cool Item",
-  "item.my_mod.cool_item.tip": "你正在看着一个很酷的物品！"
+  "item.my_mod.cool_item.tip": "你正在看着一个很酷的物品！",
+  "item.my_mod.cool_item.tip.shift": "这条提示仅会在按住 Shift 时显示！",
+  "item.my_mod.cool_item.tip.ctrl": "这条提示仅会在按住 Ctrl 时显示！"
 }
 ```
 
 玩家可以在配置文件中调整提示信息的换行宽度以及显示方式。
 
-当高级气泡提示（F3 + H）开启并按下 Shift 时，会在气泡中打印该物品的 NBT。
+当高级气泡提示（`F3` + `H`）开启并按下 `Shift` 时，会在气泡中打印该物品的 NBT。
 
 ## 属性推断
 

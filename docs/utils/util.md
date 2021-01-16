@@ -20,3 +20,7 @@ Util.trimRL("my_mod:foo"); // my_mod:foo
 Util.trimRL("my_mod:foo", "my_mod"); // foo
 // 也支持 ResourceLocation 参数
 ```
+
+## MathUtil.RGBtoHSV
+
+提供 RGB 到 HSV 的转换。注：HSV 到 RGB 的转换在 MathHelper 中已有实现。
