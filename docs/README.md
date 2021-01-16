@@ -22,7 +22,7 @@ Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便
 
 #### Curse Maven
 
-具体用法参见 https://www.cursemaven.com/
+具体用法参见 [Curse Maven](https://www.cursemaven.com/)
 
 此时你的 `build.gradle` 的一部分可能是这样的：
 
