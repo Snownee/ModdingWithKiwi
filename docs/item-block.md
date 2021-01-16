@@ -41,8 +41,8 @@ public class MyModule extends AbstractModule
 @KiwiModule
 public class MyModule extends AbstractModule
 {
-    public static final Tag<Block> THONK = blockTag("my_mod", "thonk");
-    public static final Tag<EntityType<?>> BAT = entityTag("my_mod", "bat");
+    public static final INamedTag<Block> THONK = blockTag("my_mod", "thonk");
+    public static final INamedTag<EntityType<?>> BAT = entityTag("my_mod", "bat");
 }
 ```
 
