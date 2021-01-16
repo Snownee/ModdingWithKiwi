@@ -25,7 +25,7 @@ nav:
     - 调试功能: debug.md
     - 贡献者奖励:
         - 贡献者奖励: contributors/README.md
-        - IRewardProvider: contributors/provider.md
+        - ITierProvider: contributors/provider.md
         - 添加效果: contributors/renderer.md
 
 theme:
