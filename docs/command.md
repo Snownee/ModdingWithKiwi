@@ -36,24 +36,10 @@
 /kiwi dumpLoots my_mod:.+
 ```
 
-## 切换游戏模式
-
-Kiwi 提供了旧版本使用数字 ID 切换游戏模式的功能。
-
-```text
-/kiwi <gamemode> [target]
-```
-
-将自己切换为创造模式：
-
-```text
-/kiwi 1
-```
-
 ## 应用调试世界规则
 
 ```text
-/kiwi cleanWorld
+/kiwi debugWorldRules
 ```
 
 等效于

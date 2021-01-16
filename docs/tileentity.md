@@ -30,9 +30,9 @@ public class MyTile extends BaseTile
     }
 
     @Override
-    public void read(CompoundNBT data)
+    public void read(BlockState state, CompoundNBT data)
     {
-        super.read(data);
+        super.read(state, data);
     }
 
     @Override
@@ -47,10 +47,10 @@ public class MyTile extends BaseTile
 
 ```java
 @Override
-public void read(CompoundNBT compound)
+public void read(BlockState state, CompoundNBT compound)
 {
     readPacketData(compound);
-    super.read(compound);
+    super.read(state, compound);
 }
 
 @Override

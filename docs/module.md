@@ -53,13 +53,13 @@ public class MyModule extends AbstractModule
 一个模组可以拥有多个模块，不同的模块通过 name 区分。name 默认同 modid。
 
 ```java
-@KiwiModule(name = "test")
+@KiwiModule("test")
 ```
 
 某些情况下你可能需要手动指定该模块所属的模组：
 
 ```java
-@KiwiModule(modid = "another_mod", name = "test")
+@KiwiModule(modid = "another_mod", value = "test")
 ```
 
 你可以令模块仅当前置模组安装时才加载：
@@ -78,13 +78,12 @@ public class MyModule extends AbstractModule
 
 ## `@KiwiModule.Optional`
 
-此注解可令该模块通过配置文件禁用。配置文件名为 kiwi.toml ，它的结构大概长这样：
+此注解可令该模块通过配置文件禁用。配置文件为模组所使用的 COMMON 类型默认配置文件，若该文件为定义，则会自动创建一个名为 `modid-modules.toml` 的配置文件。它的结构大概长这样：
 
-```text
+```toml
 [modules]
-	[modules.my_mod]
-		my_mod = true
-		test = false
+  	my_mod = true
+  	test = false
 ```
 
 添加了该注解的模块默认启用。但你可以这样将其设为默认禁用：

@@ -6,7 +6,7 @@
 
 Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便快捷地开发 Forge 模组。
 
-本指南面向 Minecraft 1.15+（Kiwi 2.0+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了足够的了解。
+本指南面向 Minecraft 1.16+（Kiwi 3.0+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了足够的了解。
 
 [使用 Kiwi 开发的模组](https://www.curseforge.com/minecraft/mc-mods/kiwi/relations/dependents?filter-related-dependents=3)
 你可以参考以上模组来更好地理解 Kiwi 的使用方法。让我们来看看它们都用到了哪些特性：
@@ -28,8 +28,8 @@ Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便
 
 ```groovy
 dependencies {
-    minecraft "net.minecraftforge:forge:1.15.2-31.1.0"
-    compile fg.deobf("curse.maven:kiwi-303657:3103508")
+    minecraft "net.minecraftforge:forge:1.16.4-35.1.31"
+    compile fg.deobf("curse.maven:kiwi-303657:3103509")
 }
 ```
 
@@ -45,8 +45,8 @@ compile files("Kiwi-${minecraft_version}-${kiwi_version}-deobf.jar")
 
 ```groovy
 dependencies {
-    minecraft "net.minecraftforge:forge:1.15.2-31.1.0"
-    compile files("Kiwi-1.15.2-2.8.5-deobf.jar")
+    minecraft "net.minecraftforge:forge:1.16.4-35.1.31"
+    compile files("Kiwi-1.16.4-3.4.1-deobf.jar")
 }
 ```
 
@@ -62,7 +62,7 @@ dependencies {
 [[dependencies.my_mod]]
     modId="kiwi"
     mandatory=true
-    versionRange="[2.8, 2.12)"
+    versionRange="[3.4, 3.8)"
     ordering="BEFORE"
     side="BOTH"
 ```
