@@ -33,7 +33,7 @@ dependencies {
 }
 ```
 
-### 本地添加
+#### 本地添加
 
 在[这里](https://www.curseforge.com/minecraft/mc-mods/kiwi/files)下载未混淆（deobf）版本的 Kiwi。打开你项目中的 `build.gradle` ，在 `dependencies` 中添加一行：
 
