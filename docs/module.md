@@ -50,7 +50,7 @@ public class MyModule extends AbstractModule
 
 所有模块都应该添加这一注解，用于自动加载。
 
-一个模组可以拥有多个模块，不同的模块通过 name 区分。name 默认同 modid。
+一个模组可以拥有多个模块，不同的模块通过 value 区分。value 默认为 *core*。
 
 ```java
 @KiwiModule("test")
