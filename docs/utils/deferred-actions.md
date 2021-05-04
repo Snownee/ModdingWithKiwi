@@ -7,6 +7,7 @@ DeferredActions.add(() -> doSth());
 ```
 
 DeferredActions 提供的内置任务有：
+
  - 注册堆肥配方
  - 使村民可以捡起并堆肥某物品
  - 注册斧头剥皮转换配方
