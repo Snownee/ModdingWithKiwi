@@ -7,6 +7,7 @@ nav:
     - 自动注册: registry.md
     - 实用类:
         - NBTHelper: utils/nbthelper.md
+        - 推迟任务: utils/deferred-actions.md
         - 杂项: utils/util.md
     - 物品 / 方块拓展: item-block.md
     - 注解式配置文件: config.md

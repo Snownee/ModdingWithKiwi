@@ -1,9 +1,5 @@
 # 计划任务
 
-!!! Warning
-
-  该系统仍不完善，请谨慎使用。
-
 为了在未来某个时间（甚至是下次游玩时）执行一段代码，我们引入了计划任务系统。
 
 如果你不需要考虑序列化问题，事情将变得很简单：
@@ -40,7 +36,7 @@ public class MyTask extends SimpleWorldTask {
         if (++tick >= 50) {
             MinecraftServer server = ticker.getWorld().getServer();
             if (server != null) {
-                TextComponent text = new StringTextComponent(words);
+                ITextComponent text = new StringTextComponent(words);
                 server.getPlayerList().sendMessage(text);
             }
             return true;

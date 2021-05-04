@@ -33,7 +33,7 @@ public class MyModule extends AbstractModule
 
 在辅助方法 `blockProp` 中，Kiwi 会根据你选定的 Material 设置一个默认的硬度和声音类型。
 
-从3.5版本开始，Kiwi会自动为所有方块设置可燃性。
+从3.5版本开始，Kiwi 会自动为所有方块设置可燃性。
 
 ## 注册标签
 
