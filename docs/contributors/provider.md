@@ -26,7 +26,7 @@ Kiwi 内置了一个实现 —— JsonRewardProvider。允许你从某个 URL �
 ```java
 public class MyRewardProvider extends JsonRewardProvider {
     public MyRewardProvider() {
-        super("Snownee", () -> Collections.singletonList("https://raw.githubusercontent.com/Snownee/Kiwi/master/contributors.json"));
+        super("Snownee", () -> Collections.singletonList("https://cdn.jsdelivr.net/gh/Snownee/Kiwi@master/contributors.json"));
     }
 }
 ```
