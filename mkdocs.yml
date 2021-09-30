@@ -13,7 +13,7 @@ nav:
         - 杂项: utils/util.md
     - 物品 / 方块拓展: item-block.md
     - 注解式配置文件: config.md
-    - TileEntity: tileentity.md
+    - BlockEntity: blockentity.md
     - 网络: network.md
     - 配方:
         - 条件：模块加载: recipe/module-loaded.md
