@@ -1,6 +1,8 @@
 site_name: Modding with Kiwi
+repo_name: ModdingWithKiwi
 repo_url: https://github.com/Snownee/ModdingWithKiwi
 site_author: Snownee
+
 nav:
     - 前言: README.md
     - 模块系统: module.md
@@ -32,3 +34,44 @@ nav:
 
 theme:
     name: material
+
+ language: en
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+plugins:
+  - search
+  - awesome-pages

@@ -1,0 +1,1 @@
+[![Documentation Status](https://readthedocs.org/projects/moddingwithkiwi/badge/?version=latest)](https://moddingwithkiwi.readthedocs.io/zh_CN/latest/?badge=latest)
