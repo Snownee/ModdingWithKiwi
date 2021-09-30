@@ -20,7 +20,6 @@ nav:
         - 配方：消耗容器: recipe/no-containers.md
         - 动态配方: recipe/dynamic.md
         - 新的配方类型: recipe/new-type.md
-        - 流体Ingredient: recipe/fluid-ingredient.md
     - 可变材质方块:
         - 可变材质方块: textureable/README.md
         - 合成配方: textureable/crafting.md
@@ -35,6 +34,45 @@ nav:
 theme:
     name: material
     language: zh
+    features:
+        - content.code.annotate
+        - content.tabs.link
+
+markdown_extensions:
+    - admonition
+    - abbr
+    - attr_list
+    - def_list
+    - footnotes
+    - meta
+    - md_in_html
+    - toc:
+        permalink: true
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.progressbar
+    - pymdownx.saneheaders
+    - pymdownx.smartsymbols
+    - pymdownx.snippets:
+        base_path: docs
+    - pymdownx.tabbed
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
 
 plugins:
   - search
