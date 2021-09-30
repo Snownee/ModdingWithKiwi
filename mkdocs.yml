@@ -31,4 +31,4 @@ nav:
         - 添加效果: contributors/renderer.md
 
 theme:
-    name: readthedocs
+    name: material

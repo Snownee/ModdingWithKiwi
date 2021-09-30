@@ -10,7 +10,7 @@ Util.RL("foo", "my_mod"); // my_mod:foo
 Util.RL("minecraft:foo", "my_mod"); // minecraft:foo
 ```
 
-## Util.trilRL
+## Util.trimRL
 
 清除 ResourceLocation 默认的命名空间。
 
