@@ -78,7 +78,7 @@ public class MyModule extends AbstractModule
 
 ## `@KiwiModule.Optional`
 
-此注解可令该模块通过配置文件禁用。配置文件为模组所使用的 COMMON 类型默认配置文件，若该文件为定义，则会自动创建一个名为 `modid-modules.toml` 的配置文件。它的结构大概长这样：
+此注解可令该模块通过配置文件禁用。配置文件为模组所使用的 COMMON 类型默认配置文件，若该文件未注册，则会自动创建一个名为 `modid-modules.toml` 的配置文件。它的结构大概长这样：
 
 ```toml
 [modules]
@@ -141,11 +141,11 @@ public class MyModule extends AbstractModule
 
 ## 自定义加载条件
 
-有时，仅仅通过配置文件或依赖来判断模块是否需要加载仍满足不了我们的需求。比如我们希望模块仅在 Mixin 生效时加载。这时候我们需要用到 `@KiwiModule.LoadingCondition`，将静态方法放在任意位置即可。
+有时，仅仅通过配置文件或依赖来判断模块是否需要加载仍满足不了我们的需求。这时候我们需要用到 `@KiwiModule.LoadingCondition`，将静态方法放在任意位置即可。
 
 ```java
 @LoadingCondition("dab")
 public static boolean shouldLoadDab(LoadingContext ctx) {
-    return Hook.mixin;
+    return bool;
 }
 ```
