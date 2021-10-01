@@ -18,9 +18,9 @@ Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便
 
 ### 加入依赖
 
-这里有两种方式添加依赖文件：通过 Curse Maven 添加或本地添加。推荐使用 Curse Maven 添加。
+这里有两种方式添加依赖文件：通过 Curse Maven 添加或本地添加。
 
-#### Curse Maven
+#### Curse Maven（推荐）
 
 具体用法参见 [Curse Maven](https://www.cursemaven.com/)
 
