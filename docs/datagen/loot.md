@@ -1,5 +1,7 @@
 # 战利品表
 
+## KiwiLootTableProvider
+
 ```java
 @Override
 public void gatherData(GatherDataEvent event) {
@@ -12,6 +14,8 @@ public void gatherData(GatherDataEvent event) {
 	}
 }
 ```
+
+## KiwiBlockLoot
 
 ```java
 public class CoreBlockLoot extends KiwiBlockLoot {
