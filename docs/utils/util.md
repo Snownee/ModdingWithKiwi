@@ -21,6 +21,18 @@ Util.trimRL("my_mod:foo", "my_mod"); // foo
 // 也支持 ResourceLocation 参数
 ```
 
+## Util.getRecipeManager
+
+无需提供参数获取 RecipeManager。
+
+## Util.getRecipes
+
+获得某一类别的所有配方。原版中对应方法为私有，故设置此方法方便访问。
+
+## MathUtil.fibonacciSphere
+
+获得一个球面上均匀排列的点。
+
 ## MathUtil.RGBtoHSV
 
-提供 RGB 到 HSV 的转换。注：HSV 到 RGB 的转换在 MathHelper 中已有实现。
+提供 RGB 到 HSV 的转换。注：HSV 到 RGB 的转换在 Mth 中已有实现。

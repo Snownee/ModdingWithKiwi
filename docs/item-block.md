@@ -21,19 +21,18 @@ Kiwi 对 Item / Block 类进行了拓展，推荐直接继承这些类编写自�
 
 ## 属性推断
 
-注册方块时，你可以使用辅助方法 `blockProp` 快速创建 AbstractBlock.Properties：
+注册方块时，你可以使用辅助方法 `blockProp` 快速创建 BlockBehaviour.Properties：
 
 ```java
 @KiwiModule
-public class MyModule extends AbstractModule
-{
-    public static final Block COOL_BLOCK = new Block(blockProp(Material.WOOD));
+public class MyModule extends AbstractModule {
+	public static Block COOL_BLOCK = new Block(blockProp(Material.WOOD));
 }
 ```
 
 在辅助方法 `blockProp` 中，Kiwi 会根据你选定的 Material 设置一个默认的硬度和声音类型。
 
-从3.5版本开始，Kiwi 会自动为所有方块设置可燃性。
+此外，Kiwi 会自动为所有被注册的方块设置可燃性。
 
 ## 注册标签
 
@@ -41,17 +40,17 @@ public class MyModule extends AbstractModule
 
 ```java
 @KiwiModule
-public class MyModule extends AbstractModule
-{
-    public static final INamedTag<Block> THONK = blockTag("my_mod", "thonk");
-    public static final INamedTag<EntityType<?>> BAT = entityTag("my_mod", "bat");
+public class MyModule extends AbstractModule {
+    public static final Tag.Named<Block> THONK = blockTag("my_mod", "thonk");
+    public static final Tag.Named<EntityType<?>> BAT = entityTag("my_mod", "bat");
 }
 ```
 
-## 在客户端写入 TileEntity 数据
+## 在客户端写入 BlockEntity 数据
 
-原版中，BlockItem 通过 NBT 中 `BlockEntityTag` 标签写入 TileEntity 数据只在服务端发生。有些时候你希望数据瞬间被更新，这时你只需要：
+原版中，BlockItem 通过 NBT 中 `BlockEntityTag` 标签写入 BlockEntity 数据只在服务端发生。有些时候你希望数据瞬间被更新，这时你只需要：
 
 ```java
-ModBlockItem.INSTANT_UPDATE_TILES.add(TILE_ENTITY_TYPE);
+if (FMLEnvironment.dist.isClient())
+	ModBlockItem.INSTANT_UPDATE_TILES.add(BLOCK_ENTITY_TYPE);
 ```

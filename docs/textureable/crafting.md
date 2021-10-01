@@ -35,9 +35,9 @@
 
 “这的确很棒，可如果我想在物品名中显示这是什么材质的楼梯怎么办？"
 
-你需要添加标记让可变材质方块在合成以及序列化时记录来源的物品：（第16行）
+你需要添加标记让可变材质方块在合成以及序列化时记录来源的物品：
 
-```json
+```json hl_lines="16"
 {
   "type": "kiwi:texture_block",
   "pattern": [
@@ -63,13 +63,12 @@
 
 这样你得到的物品 NBT 中就会记录 `top` key 所使用的物品了。
 
-除此之外，你还需要告诉 TileEntity 这个是作为标记的 key：
+除此之外，你还需要告诉 BlockEntity 这个是作为标记的 key：
 
 ```java
 @Override
-public boolean isMark(String key)
-{
-    return "top".equals(key);
+public boolean isMark(String key) {
+	return "top".equals(key);
 }
 ```
 

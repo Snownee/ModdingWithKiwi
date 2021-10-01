@@ -2,6 +2,8 @@
 
 Kiwi 实现了一套类似于 Forge 1.12.2 时代的注解式配置文件系统。
 
+## 定义类
+
 这是示例配置文件类：
 
 ```java
@@ -53,4 +55,14 @@ enumValue = "COMMON"
 [Malay]
 	#\ MalayP /
 	P = "MalayP"
+```
+
+## 监听选项刷新
+
+你可以在配置类里添加 `onChanged` 静态方法来监听选项刷新。
+
+```java
+public static void onChanged(String path) {
+	// do sth
+}
 ```
