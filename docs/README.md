@@ -9,7 +9,8 @@ Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便
 本指南面向 Minecraft 1.17+（Kiwi 4.0+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了一定的了解。
 
 [使用 Kiwi 开发的模组](https://www.curseforge.com/minecraft/mc-mods/kiwi/relations/dependents?filter-related-dependents=3)
-你可以参考以上模组来更好地理解 Kiwi 的使用方法。让我们来看看它们都用到了哪些特别的功能：
+
+你可以参考以上模组来更好地理解 Kiwi 的使用方法。其中用到特殊功能的模组：
 
  - [Snow! Real Magic!](https://www.curseforge.com/minecraft/mc-mods/snow-real-magic)：替换原版注册项、可变材质方块
  - [Fruit Trees](https://www.curseforge.com/minecraft/mc-mods/fruit-trees)：模块加载条件、添加新的配方类型
