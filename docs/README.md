@@ -29,8 +29,8 @@ Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便
 
 ```groovy
 dependencies {
-    minecraft "net.minecraftforge:forge:1.17.1-37.0.73"
-	implementation fg.deobf("curse.maven:jade-324717:3468944")
+	minecraft "net.minecraftforge:forge:1.17.1-37.0.73"
+	implementation fg.deobf("curse.maven:kiwi-303657:3468944")
 }
 ```
 
