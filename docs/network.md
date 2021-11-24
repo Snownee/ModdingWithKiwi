@@ -8,7 +8,7 @@ IPacketHandler 的主要功能是处理包接收方的行为。
 
 ```java
 // 设置包的类型名及发送方向。并自动注册
-@KiwiPacket(value = "my", dir = Direction.PLAY_TO_SERVER)
+@KiwiPacket(value = "my", dir = Direction.PLAY_TO_CLIENT)
 public class MyPacket extends PacketHandler {
 	// 将自动注册的实例注入到 I 中
 	public static MyPacket I;
