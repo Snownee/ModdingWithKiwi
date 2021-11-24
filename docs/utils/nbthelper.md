@@ -1,5 +1,7 @@
 # NBTHelper
 
+`snownee.kiwi.util.NBTHelper`
+
 NBTHelper 提供了对 CompoundTag 的快捷操作，使你不必担心操作 NBT 时某个中间节点为空。
 
 ## 创建
@@ -32,6 +34,3 @@ data.get(); // { b: { c: "2" } }
 data.getString("a"); // null
 data.getString("a", "empty"); // "empty"
 ```
-
-
-

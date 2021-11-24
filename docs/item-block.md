@@ -51,6 +51,6 @@ public class MyModule extends AbstractModule {
 原版中，BlockItem 通过 NBT 中 `BlockEntityTag` 标签写入 BlockEntity 数据只在服务端发生。有些时候你希望数据瞬间被更新，这时你只需要：
 
 ```java
-if (FMLEnvironment.dist.isClient())
+if (Platform.isPhysicalClient())
 	ModBlockItem.INSTANT_UPDATE_TILES.add(BLOCK_ENTITY_TYPE);
 ```

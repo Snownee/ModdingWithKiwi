@@ -8,8 +8,9 @@ nav:
     - 模块系统: module.md
     - 自动注册: registry.md
     - 实用类:
+        - Platform: utils/platform.md
         - NBTHelper: utils/nbthelper.md
-        - 推迟任务: utils/deferred-actions.md
+        - 原版操作: utils/vanilla-actions.md
         - 杂项: utils/util.md
     - 物品 / 方块拓展: item-block.md
     - 注解式配置文件: config.md
@@ -25,8 +26,8 @@ nav:
         - 动态配方: recipe/dynamic.md
         - 新的配方类型: recipe/new-type.md
     - 可变贴图方块:
-        - 可变贴图方块: textureable/README.md
-        - 合成配方: textureable/crafting.md
+        - 可变贴图方块: retexture/README.md
+        - 合成配方: retexture/crafting.md
     - 计划任务: schedule.md
     - 内置命令: command.md
     - 调试功能: debug.md

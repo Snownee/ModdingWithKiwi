@@ -21,7 +21,7 @@ Contributors.isContributor(author, player, tier);
 
 ```java
 @Override
-protected void init(FMLCommonSetupEvent event) {
+protected void init(InitEvent event) {
 	registerTierProvider(new MyTierProvider());
 }
 ```
@@ -39,8 +39,8 @@ Kiwi 内置了一个实现 —— JsonTierProvider。允许你从某个 URL 中�
 一般来说，你只需要继承并注册这个类就可以了：
 
 ```java
-public class MyRewardProvider extends JsonTierProvider {
-	public MyRewardProvider() {
+public class MyTierProvider extends JsonTierProvider {
+	public MyTierProvider() {
 		super("Snownee", () -> Collections.singletonList("https://cdn.jsdelivr.net/gh/Snownee/Kiwi@master/contributors.json"));
 	}
 }

@@ -6,14 +6,11 @@
 
 Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便快捷地开发 Forge 模组。
 
-本指南面向 Minecraft 1.17+（Kiwi 4.0+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了一定的了解。
+本指南面向 Minecraft 1.17+（Kiwi 5.0+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了一定的了解。
 
 [使用 Kiwi 开发的模组](https://www.curseforge.com/minecraft/mc-mods/kiwi/relations/dependents?filter-related-dependents=3)
 
-你可以参考以上模组来更好地理解 Kiwi 的使用方法。其中用到特殊功能的模组：
-
- - [Snow! Real Magic!](https://www.curseforge.com/minecraft/mc-mods/snow-real-magic)：替换原版注册项、可变材质方块
- - [Fruit Trees](https://www.curseforge.com/minecraft/mc-mods/fruit-trees)：模块加载条件、添加新的配方类型
+你可以参考以上模组来更好地理解 Kiwi 的使用方法。
 
 ## 准备工作
 
@@ -30,9 +27,11 @@ Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便
 ```groovy
 dependencies {
 	minecraft "net.minecraftforge:forge:1.17.1-37.0.73"
-	implementation fg.deobf("curse.maven:kiwi-303657:3468944")
+	implementation fg.deobf("curse.maven:kiwi-303657:${kiwi_fileId}")
 }
 ```
+
+[**文件ID参考**](https://www.curseforge.com/minecraft/mc-mods/kiwi/files/all)
 
 #### 本地添加
 
@@ -45,7 +44,7 @@ flatDir { dir 'libs' }
 在 `repositories` 中添加：
 
 ```groovy
-implementation fg.deobf("libs:Kiwi-1.17.1:4.1.0")
+implementation fg.deobf("libs:Kiwi-1.17.1:5.0.0")
 ```
 
 重新部署你的开发环境。这时若运行项目时 Kiwi 被加载，即说明准备工作已经完成。
@@ -58,7 +57,7 @@ implementation fg.deobf("libs:Kiwi-1.17.1:4.1.0")
 [[dependencies.my_mod]]
     modId="kiwi"
     mandatory=true
-    versionRange="[4, 5)"
+    versionRange="[5, 6)"
     ordering="BEFORE"
     side="BOTH"
 ```

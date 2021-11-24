@@ -98,7 +98,7 @@ public class MyModule extends AbstractModule {
 
 ```java
 @KiwiModule
-@KiwiModule.Category
+@Category
 public class MyModule extends AbstractModule {
 	public static final CreativeModeTab TAB = new CreativeModeTab("my_mod.items") {
 		@Override
@@ -117,23 +117,23 @@ public class MyModule extends AbstractModule {
 
 ```java
 @KiwiModule
-@KiwiModule.Category("building_blocks")
+@Category("building_blocks")
 public class MyModule extends AbstractModule {...}
 ```
 
 ```java
 @KiwiModule
-@KiwiModule.Category("my_mod.my_awesome_group")
+@Category("my_mod.my_awesome_group")
 public class MyModule extends AbstractModule {...}
 ```
 
 ### 为单个注册项设置 CreativeModeTab
 
 ```java
-@KiwiModule.Category("redstone")
+@Category("redstone")
 public static Item MY_ITEM = new Item(itemProp());
 
-@KiwiModule.Category("building_blocks")
+@Category("building_blocks")
 public static Block MY_BLOCK = new Block(blockProp(Blocks.SAND));
 ```
 
@@ -152,4 +152,22 @@ public static Block MY_GLASS = new GlassBlock(blockProp(Blocks.GLASS));
 ```java
 @RenderLayer(Layer.CUTOUT)
 public class MyBlock extends GlassBlock {...}
+```
+
+## 自定义 BlockItem
+
+使自己的方块实现 IKiwiBlock 接口，可为方块设置 BlockItem 工厂，或设置 ItemStack 敏感的名字。
+
+```java
+public interface IKiwiBlock {
+
+	default MutableComponent getName(ItemStack stack) {
+		return new TranslatableComponent(stack.getDescriptionId());
+	}
+
+	default BlockItem createItem(Item.Properties builder) {
+		return new ModBlockItem((Block) this, builder);
+	}
+
+}
 ```

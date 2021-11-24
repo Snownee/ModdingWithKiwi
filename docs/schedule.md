@@ -76,7 +76,7 @@ public class MyTask extends SimpleLevelTask {
 
 ```java
 @Override
-protected void serverInit(FMLServerStartingEvent event) {
+protected void serverInit(ServerInitEvent event) {
 	Scheduler.register(MyTask.ID, MyTask.class);
 }
 ```

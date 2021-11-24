@@ -16,41 +16,34 @@ public class MyModule extends AbstractModule {
 你可以通过复写方法来订阅生命周期的事件：
 
 ```java
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
-import snownee.kiwi.AbstractModule;
-import snownee.kiwi.KiwiModule;
-
 @KiwiModule
 public class MyModule extends AbstractModule {
-    @Override
-    protected void preInit() {}
 
-    @Override
-    protected void init(FMLCommonSetupEvent event) {}
+	@Override
+	protected void preInit() {}
 
-    @Override
-    @OnlyIn(Dist.CLIENT)
-    protected void clientInit(FMLClientSetupEvent event) {}
+	@Override
+	protected void init(InitEvent event) {}
 
-    @Override
-    protected void serverInit(FMLServerStartingEvent event) {}
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	protected void clientInit(ClientInitEvent event) {}
 
-    @Override
-    protected void postInit() {}
+	@Override
+	protected void serverInit(ServerInitEvent event) {}
+
+	@Override
+	protected void postInit(PostInitEvent event) {}
 
 	@Override
 	protected void gatherData(GatherDataEvent event) {}
+
 }
 ```
 
 ## `@KiwiModule`
 
-所有模块都应该添加这一注解，用于自动加载。
+所有模块都应该添加该注解，用于自动加载。
 
 一个模组可以拥有多个模块，不同的模块通过 value 区分。value 默认为 *core*。
 

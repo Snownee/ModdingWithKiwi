@@ -10,7 +10,6 @@ Kiwi 实现了一套类似于 Forge 1.12.2 时代的注解式配置文件系统�
 import java.util.Arrays;
 import java.util.List;
 
-import net.minecraftforge.fml.config.ModConfig;
 import snownee.kiwi.config.KiwiConfig;
 import snownee.kiwi.config.KiwiConfig.*;
 

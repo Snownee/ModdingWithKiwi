@@ -1,6 +1,6 @@
 # 网络
 
-编写一个 Packet：
+## 编写 IPacketHandler
 
 ```java
 import java.util.function.Supplier;
@@ -44,12 +44,6 @@ public class MyPacket extends Packet {
 
 	}
 }
-```
-
-在 preInit 阶段注册这个 Packet：
-
-```java
-NetworkChannel.register(MyPacket.class, new MyPacket.Handler());
 ```
 
 发送这个 Packet：
