@@ -2,61 +2,34 @@
 
 ## 编写 IPacketHandler
 
+IPacketHandler 的主要功能是处理包接收方的行为。
+
+一般情况下可以使用 IPacketHandler 的默认实现 PacketHandler。
+
 ```java
-import java.util.function.Supplier;
+// 设置包的类型名及发送方向。并自动注册
+@KiwiPacket(value = "my", dir = Direction.PLAY_TO_SERVER)
+public class MyPacket extends PacketHandler {
+	// 将自动注册的实例注入到 I 中
+	public static MyPacket I;
 
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraftforge.fmllegacy.network.NetworkDirection;
-import net.minecraftforge.fmllegacy.network.NetworkEvent.Context;
-import snownee.kiwi.network.Packet;
-
-public class MyPacket extends Packet {
-	private int number;
-
-	public MyPacket(int number) {
-		this.number = number;
+	@Override
+	public CompletableFuture<FriendlyByteBuf> receive(Function<Runnable, CompletableFuture<FriendlyByteBuf>> executor, FriendlyByteBuf buf, ServerPlayer responseSender) {
+		int number = buf.readVarInt();
+		// 在主线程上执行游戏相关行为
+		return executor.apply(() -> System.out.println(number));
+		// return CompletableFuture.completedFuture(null);
 	}
 
-	public static class Handler extends PacketHandler<MyPacket> {
-
-		@Override
-		public void encode(MyPacket msg, FriendlyByteBuf buffer) {
-			buffer.writeVarInt(msg.number);
-		}
-
-		@Override
-		public MyPacket decode(FriendlyByteBuf buffer) {
-			return new MyPacket(buffer.readVarInt());
-		}
-
-		@Override
-		public void handle(MyPacket message, Supplier<Context> ctx) {
-			ctx.get().enqueueWork(() -> {
-				System.out.println(message.number);
-			});
-			ctx.get().setPacketHandled(true);
-		}
-
-		@Override
-		public NetworkDirection direction() {
-			return NetworkDirection.PLAY_TO_CLIENT;
-		}
-
+	// 助手方法
+	public static void send(ServerPlayer player, int n) {
+		I.send(player, $ -> $.writeVarInt(n));
 	}
 }
 ```
 
-发送这个 Packet：
+## 发送包
 
 ```java
-// 仅发送给位于主世界的玩家
-new MyPacket(42).send(PacketDistributor.DIMENSION.with(() -> DimensionType.OVERWORLD));
+MyPacket.send(player, 42);
 ```
-
-若你的 Packet 只有一种发送方式，可以尝试复写 send 方法：
-
-```java
-new MyPacket(42).send();
-```
-
-若你的 Packet 只需从客户端发出，可以直接继承 `snownee.kiwi.network.ClientPacket`。使用上述方法发送你的 Packet。

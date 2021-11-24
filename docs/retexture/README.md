@@ -88,3 +88,14 @@ public void clientInit(ClientInitEvent event) {
 
 !!! Note
 	需要得到被标记 key 的物品名？只需使用 `Util.getBlockDefName(stack, key)`
+
+## RenderType
+
+如果你需要让方块支持透明或半透明方块，则在 `clientInit` 中执行如下代码：
+
+```java
+ItemBlockRenderTypes.setRenderLayer(MY_BLOCK, EnumUtil.BLOCK_RENDER_TYPES::contains);
+```
+
+!!! Note
+	如果想要正常面剔除仍需要编写额外的 mixin
