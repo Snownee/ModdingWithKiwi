@@ -65,12 +65,6 @@ public class MyModule extends AbstractModule {
 @KiwiModule(dependencies = "@dab")
 ```
 
-极少数情况下你可能需要手动指定该模块所属的模组：
-
-```java
-@KiwiModule(modid = "another_mod", value = "test")
-```
-
 ## `@KiwiModule.Optional`
 
 此注解可令该模块通过配置文件禁用。配置文件为模组所使用的 COMMON 类型默认配置文件，若该文件未注册，则会自动创建一个名为 `modid-modules.toml` 的配置文件。它的结构大概长这样：
@@ -84,7 +78,7 @@ public class MyModule extends AbstractModule {
 添加了该注解的模块默认启用。但你可以这样将其设为默认禁用：
 
 ```java
-@KiwiModule.Optional(disabledByDefault = true)
+@KiwiModule.Optional(defaultEnabled = false)
 ```
 
 ## `@KiwiModule.Subscriber`

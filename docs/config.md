@@ -13,7 +13,7 @@ import java.util.List;
 import snownee.kiwi.config.KiwiConfig;
 import snownee.kiwi.config.KiwiConfig.*;
 
-@KiwiConfig(type = ModConfig.Type.COMMON)
+@KiwiConfig(type = ConfigType.COMMON)
 public class MyConfig {
 
     public static int intValue = 5;

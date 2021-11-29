@@ -28,6 +28,7 @@ Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便
 dependencies {
 	minecraft "net.minecraftforge:forge:1.17.1-37.0.73"
 	implementation fg.deobf("curse.maven:kiwi-303657:${kiwi_fileId}")
+    annotationProcessor "curse.maven:kiwi-303657:${kiwi_fileId}"
 }
 ```
 
@@ -45,6 +46,7 @@ flatDir { dir 'libs' }
 
 ```groovy
 implementation fg.deobf("libs:Kiwi-1.17.1:5.0.0")
+annotationProcessor "libs:Kiwi-1.17.1:5.0.0"
 ```
 
 重新部署你的开发环境。这时若运行项目时 Kiwi 被加载，即说明准备工作已经完成。
