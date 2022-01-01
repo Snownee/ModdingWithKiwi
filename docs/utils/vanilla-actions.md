@@ -23,3 +23,6 @@ protected void init(InitEvent event) {
   event.enqueueWork(() -> VanillaActions.registerCompostable(0.5F, Items.DIAMOND));
 }
 ```
+
+!!! Note
+	Forge 平台下，`enqueueWork()` 中产生的错误会被静默处理。你可以对 `enqueueWork()` 的返回值添加异常处理器。

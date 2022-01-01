@@ -100,12 +100,8 @@ public class MyModule extends AbstractModule {
 @KiwiModule
 @Category
 public class MyModule extends AbstractModule {
-	public static final CreativeModeTab TAB = new CreativeModeTab("my_mod.items") {
-		@Override
-		public ItemStack makeIcon() {
-			return new ItemStack(Items.DANDELION);
-		}
-	};
+	public static final CreativeModeTab TAB = 
+			itemCategory("my_mod", "test", () -> new ItemStack(Items.DANDELION), null);
 
     public static Item COOL_ITEM = new ModItem(itemProp());
 }

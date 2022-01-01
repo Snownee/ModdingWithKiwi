@@ -60,7 +60,7 @@ public List<String> getRenderableTiers() {
 
 @Override
 @OnlyIn(Dist.CLIENT)
-public RewardLayer createRenderer(RenderLayerParent<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> entityRenderer, String tier) {
+public CosmeticLayer createRenderer(RenderLayerParent<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> entityRenderer, String tier) {
 	switch (tier) {
 	case "2020q3":
 		return new PlanetLayer(entityRenderer);

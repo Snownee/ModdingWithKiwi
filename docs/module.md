@@ -113,7 +113,7 @@ public class MyModule extends AbstractModule {
 
 ## `@KiwiModule.Category`
 
-设置该模块下的物品默认的 ItemGroup。将在下一节详细讲解。
+设置该模块下的物品默认的 CreativeModeTab。将在下一节详细讲解。
 
 ## 实例注入
 

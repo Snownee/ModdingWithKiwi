@@ -10,7 +10,7 @@ Platform 提供了不同模组加载器间相同功能的桥接。
 
 ## Platform.isPhysicalClient()
 
-获取当前的物理端。
+获取当前的物理端是否为客户端。
 
 ## Platform.getServer()
 

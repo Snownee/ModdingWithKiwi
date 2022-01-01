@@ -33,8 +33,8 @@ public class MyBlockEntity extends BaseBlockEntity {
 	}
 
 	@Override
-	public CompoundTag save(CompoundTag data) {
-		return super.save(data);
+	public void saveAdditional(CompoundTag data) {
+		return super.saveAdditional(data);
 	}
 }
 ```
@@ -49,9 +49,9 @@ public void load(CompoundTag data) {
 }
 
 @Override
-public CompoundTag save(CompoundTag data) {
+public void saveAdditional(CompoundTag data) {
 	writePacketData(data);
-	return super.save(data);
+	super.saveAdditional(data);
 }
 ```
 
