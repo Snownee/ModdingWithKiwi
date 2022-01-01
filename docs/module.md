@@ -111,7 +111,7 @@ public class MyModule extends AbstractModule {
 @KiwiModule.Subscriber(side = Dist.CLIENT)
 ```
 
-## `@KiwiModule.Group`
+## `@KiwiModule.Category`
 
 设置该模块下的物品默认的 ItemGroup。将在下一节详细讲解。
 
