@@ -17,7 +17,7 @@ my_block.json:
 
 其中 `all` 指定了所有面的贴图。我们需要在适当时候告诉模型这个 key 是可变贴图的。
 
-对模型文件设置 Forge 模型管线的模型加载器，一般为 `minecraft:`
+对模型文件设置 Forge 模型管线的模型加载器，一般为 `minecraft:elements`
 
 my_block.json:
 
