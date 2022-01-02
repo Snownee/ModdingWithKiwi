@@ -61,9 +61,9 @@ public class TestBlockEntity extends RetextureBlockEntity {
 	}
 
 	@Override
-	public CompoundTag save(CompoundTag compound) {
+	public void saveAdditional(CompoundTag compound) {
 		writePacketData(compound);
-		return super.save(compound);
+		super.saveAdditional(compound);
 	}
 
 }
@@ -88,6 +88,16 @@ public void clientInit(ClientInitEvent event) {
 
 !!! Note
 	需要得到被标记 key 的物品名？只需使用 `Util.getBlockDefName(stack, key)`
+
+## 代码修改贴图
+
+```java
+BlockDefinition def = BlockDefinition.fromBlock(blockState, blockEntity, level, pos);
+if (def != null)
+	blockEntity.setTexture(key, def);
+```
+
+在这里我们引入 BlockDefinition 概念是因为影响方块外观的不只有 BlockState 一个因素（如 IModelData）。你可以编写自己的 BlockDefinition，来让复杂方块也能被可变贴图方块支持。
 
 ## RenderType
 
