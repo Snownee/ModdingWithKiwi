@@ -70,13 +70,13 @@ public class TestBlockEntity extends RetextureBlockEntity {
 ```
 
 !!! Note
-	当你像给一些原版方块（主要是台阶）添加 BlockEntity 时，注意方块是否复写了 onRemove 方法，避免出现 BlockEntity 滞留问题。
+	当你给一些原版方块（主要是台阶）添加 BlockEntity 时，注意方块是否复写了 onRemove 方法，避免出现 BlockEntity 滞留问题。
 
 ## 注册 BlockEntity
 
 ```java
 public static TestBlock MY_BLOCK = new TestBlock(blockProp(Material.WOOD));
-public static BlockEntityType<?> MY_TILE = BlockEntityType.Builder.of(TestBlockEntity::new, MY_BLOCK).build(null);
+public static BlockEntityType<?> MY_TILE = blockEntity(TestBlockEntity::new, null， MY_BLOCK);
 
 @Override
 @OnlyIn(Dist.CLIENT)
