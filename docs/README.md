@@ -44,7 +44,7 @@ dependencies {
 flatDir { dir 'libs' }
 ```
 
-在 `repositories` 中添加：
+在 `dependencies` 中添加：
 
 ```groovy
 implementation fg.deobf("libs:Kiwi-1.18.1:5.2.3")
