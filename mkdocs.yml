@@ -21,7 +21,9 @@ nav:
         - 配方: datagen/recipes.md
         - 标签: datagen/tags.md
     - 配方:
+        - 原料：替代方案: recipe/alternatives.md
         - 条件：模块加载: recipe/module-loaded.md
+        - 条件：解析原料: recipe/try-parse.md
         - 配方：消耗容器: recipe/no-containers.md
         - 动态配方: recipe/dynamic.md
         - 新的配方类型: recipe/new-type.md
