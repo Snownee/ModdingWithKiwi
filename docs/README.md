@@ -47,8 +47,8 @@ flatDir { dir 'libs' }
 在 `dependencies` 中添加：
 
 ```groovy
-implementation fg.deobf("libs:Kiwi-1.18.1:5.2.3")
-annotationProcessor "libs:Kiwi-1.18.1:5.2.3"
+implementation fg.deobf("libs:Kiwi-1.18.1-forge:5.2.3")
+annotationProcessor "libs:Kiwi-1.18.1-forge:5.2.3"
 ```
 
 重新部署你的开发环境。这时若运行项目时 Kiwi 被加载，即说明准备工作已经完成。
