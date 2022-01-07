@@ -53,6 +53,10 @@ annotationProcessor "libs:Kiwi-1.18.1-forge:5.2.3"
 
 重新部署你的开发环境。这时若运行项目时 Kiwi 被加载，即说明准备工作已经完成。
 
+### 处理映射不一致问题
+
+由于 Kiwi 使用了 Mixin，所以当你所使用的代码映射与 Kiwi 不一致时，需要[这个额外步骤](https://github.com/SpongePowered/Mixin/issues/462#issuecomment-791370319)来解决。
+
 ### 向模组加载器声明前置
 
 记得在 `mods.toml` 中将 Kiwi 声明为前置模组：
@@ -71,4 +75,4 @@ annotationProcessor "libs:Kiwi-1.18.1-forge:5.2.3"
 `${mod_id}.kiwi.json` 文件会在模组构建时自动生成于根目录。该文件列出了模组内几个主要注解的目标类，免去了用户在生产环境每次启动时都需要进行类扫描的麻烦。
 
 !!! Note
-	Fabric 平台下，由于限制，开发环境中无法通过正常方式进行类扫描，因此你需要自行将 `${mod_id}.kiwi.json` 文件放入 `resources` 目录。同时记得为模组主类添加 `@Mod` 注解来指定模组的ID。
+	Fabric 平台下，由于限制，开发环境中无法通过正常方式进行类扫描，因此你需要自行将构建出的 `${mod_id}.kiwi.json` 文件放入 `resources` 目录。同时记得为模组主类添加 `@Mod` 注解来指定模组的ID。

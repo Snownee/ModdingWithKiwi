@@ -57,7 +57,7 @@ public class MyModule extends AbstractModule {
 @KiwiModule(dependencies = "crafttweaker;jei")
 ```
 
-你甚至可以声明该模块的前置模块：
+你还能以 `@` 作为前缀声明该模块的前置模块：
 
 ```java
 @KiwiModule(dependencies = "@my_mod:dab")
@@ -67,7 +67,7 @@ public class MyModule extends AbstractModule {
 
 ## `@KiwiModule.Optional`
 
-此注解可令该模块通过配置文件禁用。配置文件为模组所使用的 COMMON 类型默认配置文件，若该文件未注册，则会自动创建一个名为 `modid-modules.toml` 的配置文件。它的结构大概长这样：
+此注解可令该模块通过配置文件禁用。配置文件为模组所使用的 `COMMON` 类型默认配置文件，若该文件未注册，则会自动创建一个名为 `modid-modules.toml` 的配置文件。它的结构大概长这样：
 
 ```toml
 [modules]
