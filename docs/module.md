@@ -41,6 +41,9 @@ public class MyModule extends AbstractModule {
 }
 ```
 
+!!! Note
+	请注意，只有 `preInit` 会在运行 DataGen 时被执行。
+
 ## `@KiwiModule`
 
 所有模块都应该添加该注解，用于自动加载。

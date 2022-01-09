@@ -53,6 +53,9 @@ annotationProcessor "libs:Kiwi-1.18.1-forge:5.2.3"
 
 重新部署你的开发环境。这时若运行项目时 Kiwi 被加载，即说明准备工作已经完成。
 
+!!! Note
+	无需执行 `gradlew eclipse` 命令，可能会出现关于注解处理器的报错。
+
 ### 处理映射不一致问题
 
 由于 Kiwi 使用了 Mixin，所以当你所使用的代码映射与 Kiwi 不一致时，需要[这个额外步骤](https://github.com/SpongePowered/Mixin/issues/462#issuecomment-791370319)来解决。
