@@ -67,4 +67,4 @@ public static void onChanged(String path) {
 ```
 
 !!! Note
-	如果你的模组只使用到了 `@KiwiConfig` 注解，你可以将 Kiwi 作为可选依赖。当用户未安装 Kiwi 时，将只能使用默认值。
+	如果你的模组只使用到了 Kiwi 提供的该系统，你可以将 Kiwi 作为可选依赖。当用户未安装 Kiwi 时，将自动使用默认值。

@@ -25,4 +25,4 @@ protected void init(InitEvent event) {
 ```
 
 !!! Note
-	Forge 平台下，`enqueueWork()` 中产生的错误会被静默处理。你可以对 `enqueueWork()` 的返回值添加异常处理器。
+	Forge 平台下，`enqueueWork()` 中产生的错误会被静默处理。你可以对 `enqueueWork()` 的返回值添加异常处理器。([MinecraftForge#8255](https://github.com/MinecraftForge/MinecraftForge/issues/8255))

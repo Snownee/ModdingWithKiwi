@@ -70,7 +70,7 @@ public class TestBlockEntity extends RetextureBlockEntity {
 ```
 
 !!! Note
-	当你给一些原版方块（主要是台阶）添加 BlockEntity 时，注意方块是否复写了 onRemove 方法，避免出现 BlockEntity 滞留问题。
+	当你给一些原版方块（主要是楼梯）添加 BlockEntity 时，注意方块是否复写了 onRemove 方法，避免出现 BlockEntity 滞留问题。
 
 ## 注册 BlockEntity
 

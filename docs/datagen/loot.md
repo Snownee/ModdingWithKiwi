@@ -38,4 +38,4 @@ public class CoreBlockLoot extends KiwiBlockLoot {
 ```
 
 !!! Warning
-	由于访问性问题，请勿将 `$ -> createSingleItemTable($)` 替换为 `BlockLoot::createSingleItemTable`。
+	由于访问性问题，不要将 `$ -> createSingleItemTable($)` 替换为 `BlockLoot::createSingleItemTable`。其他方法同理。

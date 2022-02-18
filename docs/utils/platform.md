@@ -4,9 +4,9 @@
 
 Platform 提供了不同模组加载器间相同功能的桥接。
 
-## Platform.isModLoaded(String id)
+## Platform.isModLoaded(String modId)
 
-获取模组 `id` 是否被加载。
+获取某模组是否被加载。
 
 ## Platform.isPhysicalClient()
 

@@ -68,7 +68,7 @@ public class MyModule extends AbstractModule {
 }
 ```
 
-你也可以用此字段替换已有注册项：
+你也可以用此注解替换已有注册项：
 
 ```java
 @Name("minecraft:torch")
@@ -107,7 +107,7 @@ public class MyModule extends AbstractModule {
 }
 ```
 
-如果有 `@KiwiModule.Category` 注解，Kiwi 会将模块中第一个 CreativeModeTab 字段作为默认，注入到每个无 `@NoCategory` 注解的物品和方块中。
+如果有 `@KiwiModule.Category` 注解，Kiwi 会将模块中第一个 CreativeModeTab 字段作为默认，注入到每个无 `@NoCategory` 或 `@Category` 注解的物品和方块中。
 
 你也可以这样将任意 CreativeModeTab 设为默认。只需填入 CreativeModeTab 的 label 名，如原版的：`building_blocks`, `decorations`, `redstone`, `transportation`, `misc`, `food`, `tools`, `combat`, `brewing`。
 
@@ -135,7 +135,7 @@ public static Block MY_BLOCK = new Block(blockProp(Blocks.SAND));
 
 ## 为方块设置 RenderType
 
-方式一：直接设置单个注册项：
+方式一：直接设置单个方块：
 
 ```java
 // 允许的值：CUTOUT, CUTOUT_MIPPED, TRANSLUCENT
