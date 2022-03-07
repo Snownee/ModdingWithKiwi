@@ -6,7 +6,7 @@
 
 Kiwi 是一个集合了许多实用功能的前置库，它能够协助你方便快捷地开发 Forge 模组。
 
-本指南面向 Minecraft 1.18+（Kiwi 5.2+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了一定的了解。
+本指南面向 Minecraft 1.18.2+（Kiwi 6.0+），不适用于旧版本。使用前请确定你已经对 Java 和 Forge 有了一定的了解。
 
 Kiwi 同时支持 Fabric 开发。但本教程还未补充在 Fabric 开发的相关信息，故本指南目前仅适用于 Forge 开发。
 
@@ -28,7 +28,7 @@ Kiwi 同时支持 Fabric 开发。但本教程还未补充在 Fabric 开发的�
 
 ```groovy
 dependencies {
-	minecraft "net.minecraftforge:forge:1.18.1-39.0.9"
+	minecraft "net.minecraftforge:forge:1.18.2-40.0.5"
 	implementation fg.deobf("curse.maven:kiwi-303657:${kiwi_fileId}")
     annotationProcessor "curse.maven:kiwi-303657:${kiwi_fileId}"
 }
@@ -47,8 +47,8 @@ flatDir { dir 'libs' }
 在 `dependencies` 中添加：
 
 ```groovy
-implementation fg.deobf("libs:Kiwi-1.18.1-forge:5.2.3")
-annotationProcessor "libs:Kiwi-1.18.1-forge:5.2.3"
+implementation fg.deobf("libs:Kiwi-1.18.2-forge:6.0.0")
+annotationProcessor "libs:Kiwi-1.18.2-forge:6.0.0"
 ```
 
 重新部署你的开发环境。这时若运行项目时 Kiwi 被加载，即说明准备工作已经完成。
@@ -68,7 +68,7 @@ annotationProcessor "libs:Kiwi-1.18.1-forge:5.2.3"
 [[dependencies.my_mod]]
     modId="kiwi"
     mandatory=true
-    versionRange="[5, 6)"
+    versionRange="[6, 7)"
     ordering="NONE"
     side="BOTH"
 ```

@@ -26,7 +26,7 @@ Kiwi 对 Item / Block 类进行了拓展，推荐直接继承这些类编写自�
 ```java
 @KiwiModule
 public class MyModule extends AbstractModule {
-	public static Block COOL_BLOCK = new Block(blockProp(Material.WOOD));
+  public static final KiwiGO<Block> COOL_BLOCK = go(() -> new Block(blockProp(Material.WOOD)));
 }
 ```
 
@@ -41,8 +41,8 @@ public class MyModule extends AbstractModule {
 ```java
 @KiwiModule
 public class MyModule extends AbstractModule {
-    public static final Tag.Named<Block> THONK = blockTag("my_mod", "thonk");
-    public static final Tag.Named<EntityType<?>> BAT = entityTag("my_mod", "bat");
+  public static final TagKey<Block> THONK = blockTag("my_mod", "thonk");
+  public static final TagKey<EntityType<?>> BAT = entityTag("my_mod", "bat");
 }
 ```
 

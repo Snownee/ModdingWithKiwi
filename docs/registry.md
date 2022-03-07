@@ -7,9 +7,9 @@
 ```java
 @KiwiModule
 public class MyModule extends AbstractModule {
-	public static Item COOL_ITEM = new ModItem(new Item.Properties().rarity(Rarity.EPIC));
+	public static final KiwiGO<Item> COOL_ITEM = go(() -> new ModItem(new Item.Properties().rarity(Rarity.EPIC)));
 
-	public static ModBlock COOL_BLOCK = new ModBlock(BlockBehaviour.Properties.of(Material.WOOD));
+	public static final KiwiGO<ModBlock> COOL_BLOCK = go(() -> new ModBlock(BlockBehaviour.Properties.of(Material.WOOD)));
 }
 ```
 
@@ -22,9 +22,9 @@ public class MyModule extends AbstractModule {
 ```java
 @KiwiModule
 public class MyModule extends AbstractModule {
-	public static Item COOL_ITEM = new ModItem(itemProp().rarity(Rarity.EPIC));
+	public static final KiwiGO<Item> COOL_ITEM = go(() -> new ModItem(itemProp().rarity(Rarity.EPIC)));
 
-	public static ModBlock COOL_BLOCK = new ModBlock(blockProp(Material.WOOD));
+	public static final KiwiGO<ModBlock> COOL_BLOCK = go(() -> new ModBlock(blockProp(Material.WOOD)));
 }
 ```
 
@@ -38,7 +38,7 @@ public class MyModule extends AbstractModule {
 @KiwiModule
 public class MyModule extends AbstractModule {
 	@Skip
-	public static Item COOL_ITEM = new ModItem(itemProp());
+	public static final KiwiGO<Item> COOL_ITEM = go(() -> new ModItem(itemProp()));
 }
 ```
 
@@ -58,13 +58,13 @@ public class MyModule extends AbstractModule {
 @KiwiModule
 public class MyModule extends AbstractModule {
 	@NoItem
-	public static Block MY_TORCH = new MyTorchBlock();
+	public static final KiwiGO<Block> MY_TORCH = go(MyTorchBlock::new);
 
 	@NoItem
-	public static Block MY_WALL_TORCH = new MyWallTorchBlock();
+	public static final KiwiGO<Block> MY_WALL_TORCH = go(MyWallTorchBlock::new);
 
 	@Name("my_torch")
-	public static Item MY_TORCH_ITEM = new StandingAndWallBlockItem(MY_TORCH, MY_WALL_TORCH, itemProp());
+	public static final KiwiGO<Item> MY_TORCH_ITEM = go(() -> new StandingAndWallBlockItem(MY_TORCH, MY_WALL_TORCH, itemProp()));
 }
 ```
 
@@ -72,7 +72,7 @@ public class MyModule extends AbstractModule {
 
 ```java
 @Name("minecraft:torch")
-public static Item TORCH = ...;
+public static final KiwiGO<Item> TORCH = ...;
 ```
 
 ## 自定义 BlockItem 属性
@@ -83,7 +83,7 @@ public static Item TORCH = ...;
 @KiwiModule
 public class MyModule extends AbstractModule {
 	public static Item.Properties COOL_BLOCK_ITEM_BUILDER = itemProp().rarity(Rarity.RARE);
-	public static Block COOL_BLOCK = new ModBlock(blockProp(Material.WOOD));
+	public static final KiwiGO<Block> COOL_BLOCK = go(() -> new ModBlock(blockProp(Material.WOOD)));
 }
 ```
 
@@ -103,7 +103,7 @@ public class MyModule extends AbstractModule {
 	public static final CreativeModeTab TAB = 
 			itemCategory("my_mod", "test", () -> new ItemStack(Items.DANDELION), null);
 
-    public static Item COOL_ITEM = new ModItem(itemProp());
+    public static final KiwiGO<Item> COOL_ITEM = go(() -> new ModItem(itemProp()));
 }
 ```
 
@@ -127,10 +127,10 @@ public class MyModule extends AbstractModule {...}
 
 ```java
 @Category("redstone")
-public static Item MY_ITEM = new Item(itemProp());
+public static final KiwiGO<Item> MY_ITEM = go(() -> new Item(itemProp()));
 
 @Category("building_blocks")
-public static Block MY_BLOCK = new Block(blockProp(Blocks.SAND));
+public static final KiwiGO<Block> MY_BLOCK = go(() -> new Block(blockProp(Blocks.SAND)));
 ```
 
 ## 为方块设置 RenderType
@@ -140,7 +140,7 @@ public static Block MY_BLOCK = new Block(blockProp(Blocks.SAND));
 ```java
 // 允许的值：CUTOUT, CUTOUT_MIPPED, TRANSLUCENT
 @RenderLayer(Layer.CUTOUT)
-public static Block MY_GLASS = new GlassBlock(blockProp(Blocks.GLASS));
+public static final KiwiGO<Block> MY_GLASS = go(() -> new GlassBlock(blockProp(Blocks.GLASS)));
 ```
 
 方式二：为某个方块类及其子类设置 RenderType：
